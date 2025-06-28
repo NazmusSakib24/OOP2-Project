@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB6CF54B-A17D-4C63-85CA-A81ECE0D81EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Student_Hostel_Management_System</RootNamespace>
+    <AssemblyName>Student Hostel Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\AdminController.cs" />
+    <Compile Include="Controller\RoomController.cs" />
+    <Compile Include="Controller\ServiceRequestController.cs" />
+    <Compile Include="Controller\StaffController.cs" />
+    <Compile Include="Controller\StudentController.cs" />
+    <Compile Include="Controller\UserController.cs" />
+    <Compile Include="Controller\UtilityBillController.cs" />
+    <Compile Include="Model\Admin.cs" />
+    <Compile Include="Model\Admins.cs" />
+    <Compile Include="Model\RoleType.cs" />
+    <Compile Include="Model\Room.cs" />
+    <Compile Include="Model\Rooms.cs" />
+    <Compile Include="Model\ServiceRequest.cs" />
+    <Compile Include="Model\ServiceRequests.cs" />
+    <Compile Include="Model\SqlDbDataAccess.cs" />
+    <Compile Include="Model\Staff.cs" />
+    <Compile Include="Model\Staffs.cs" />
+    <Compile Include="Model\Student.cs" />
+    <Compile Include="Model\Students.cs" />
+    <Compile Include="Model\User.cs" />
+    <Compile Include="Model\Users.cs" />
+    <Compile Include="Model\UtilityBill.cs" />
+    <Compile Include="Model\UtilityBills.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\AdminHomeFrame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\AdminHomeFrame.Designer.cs">
+      <DependentUpon>AdminHomeFrame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RoomAssignmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RoomAssignmentForm.Designer.cs">
+      <DependentUpon>RoomAssignmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\RoomOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RoomOperationForm.Designer.cs">
+      <DependentUpon>RoomOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ServiceRequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ServiceRequestForm.Designer.cs">
+      <DependentUpon>ServiceRequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StaffHomeFrom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StaffHomeFrom.Designer.cs">
+      <DependentUpon>StaffHomeFrom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StaffOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StaffOperationForm.Designer.cs">
+      <DependentUpon>StaffOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudentDashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StudentDashboardForm.Designer.cs">
+      <DependentUpon>StudentDashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\StudentOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\StudentOperationForm.Designer.cs">
+      <DependentUpon>StudentOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UserOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UserOperationForm.Designer.cs">
+      <DependentUpon>UserOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\UtilityBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\UtilityBillForm.Designer.cs">
+      <DependentUpon>UtilityBillForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\AdminHomeFrame.resx">
+      <DependentUpon>AdminHomeFrame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RoomAssignmentForm.resx">
+      <DependentUpon>RoomAssignmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RoomOperationForm.resx">
+      <DependentUpon>RoomOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ServiceRequestForm.resx">
+      <DependentUpon>ServiceRequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StaffHomeFrom.resx">
+      <DependentUpon>StaffHomeFrom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StaffOperationForm.resx">
+      <DependentUpon>StaffOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StudentDashboardForm.resx">
+      <DependentUpon>StudentDashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\StudentOperationForm.resx">
+      <DependentUpon>StudentOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UserOperationForm.resx">
+      <DependentUpon>UserOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\UtilityBillForm.resx">
+      <DependentUpon>UtilityBillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
