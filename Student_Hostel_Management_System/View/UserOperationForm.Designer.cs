@@ -51,6 +51,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblUsername.Location = new System.Drawing.Point(40, 40);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(76, 16);
@@ -67,6 +68,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPassword.Location = new System.Drawing.Point(40, 80);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(70, 16);
@@ -83,6 +85,7 @@
             // lblRole
             // 
             this.lblRole.AutoSize = true;
+            this.lblRole.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblRole.Location = new System.Drawing.Point(40, 120);
             this.lblRole.Name = "lblRole";
             this.lblRole.Size = new System.Drawing.Size(42, 16);
@@ -99,73 +102,87 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.Location = new System.Drawing.Point(400, 40);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 30);
+            this.btnAdd.Size = new System.Drawing.Size(112, 40);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(400, 80);
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(590, 40);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(100, 30);
+            this.btnUpdate.Size = new System.Drawing.Size(100, 40);
             this.btnUpdate.TabIndex = 8;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(400, 120);
+            this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(400, 113);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 30);
+            this.btnDelete.Size = new System.Drawing.Size(112, 41);
             this.btnDelete.TabIndex = 9;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(400, 160);
+            this.btnSearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(590, 113);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(100, 30);
+            this.btnSearch.Size = new System.Drawing.Size(100, 41);
             this.btnSearch.TabIndex = 10;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(400, 200);
+            this.btnClear.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(400, 176);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(100, 30);
+            this.btnClear.Size = new System.Drawing.Size(112, 40);
             this.btnClear.TabIndex = 11;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnback
             // 
-            this.btnback.Location = new System.Drawing.Point(400, 240);
+            this.btnback.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnback.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnback.Location = new System.Drawing.Point(590, 176);
             this.btnback.Name = "btnback";
-            this.btnback.Size = new System.Drawing.Size(100, 30);
+            this.btnback.Size = new System.Drawing.Size(100, 40);
             this.btnback.TabIndex = 12;
             this.btnback.Text = "Back";
-            this.btnback.UseVisualStyleBackColor = true;
+            this.btnback.UseVisualStyleBackColor = false;
             this.btnback.Click += new System.EventHandler(this.btnback_Click);
             // 
             // dgvUsers
             // 
+            this.dgvUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUsers.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsers.Location = new System.Drawing.Point(40, 290);
+            this.dgvUsers.Location = new System.Drawing.Point(12, 290);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.RowHeadersWidth = 51;
             this.dgvUsers.RowTemplate.Height = 24;
             this.dgvUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUsers.Size = new System.Drawing.Size(700, 200);
+            this.dgvUsers.Size = new System.Drawing.Size(758, 200);
             this.dgvUsers.TabIndex = 13;
             this.dgvUsers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUsers_CellClick);
             // 
@@ -179,7 +196,8 @@
             // lblSecurity
             // 
             this.lblSecurity.AutoSize = true;
-            this.lblSecurity.Location = new System.Drawing.Point(40, 160);
+            this.lblSecurity.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblSecurity.Location = new System.Drawing.Point(40, 163);
             this.lblSecurity.Name = "lblSecurity";
             this.lblSecurity.Size = new System.Drawing.Size(84, 16);
             this.lblSecurity.TabIndex = 15;
@@ -188,6 +206,7 @@
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
+            this.lblUserID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblUserID.Location = new System.Drawing.Point(40, 200);
             this.lblUserID.Name = "lblUserID";
             this.lblUserID.Size = new System.Drawing.Size(55, 16);
@@ -205,6 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(782, 503);
             this.Controls.Add(this.txtUserID);
             this.Controls.Add(this.lblUserID);

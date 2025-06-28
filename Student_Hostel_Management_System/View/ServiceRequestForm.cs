@@ -29,12 +29,11 @@ namespace Student_Hostel_Management_System.View
 
             if (loggedInUser.Role == RoleType.Student)
             {
-                // Buttons: only Add, Clear, Back enabled
                 btnUpdate.Enabled = false;
                 btnDelete.Enabled = false;
                 btnSearch.Enabled = false;
+                txtRequestID.ReadOnly = true;
 
-                // Only show their own StudentID and RoomID
                 Student student = studentController.SearchStudentByUserID(loggedInUser.UserID);
                 if (student != null)
                 {
@@ -49,7 +48,8 @@ namespace Student_Hostel_Management_System.View
             }
             else
             {
-                // Admin and Staff see all students and rooms
+                txtRequestID.ReadOnly = false;
+
                 List<Student> students = studentController.GetAllStudents();
                 cmbStudentID.Items.Clear();
                 foreach (Student s in students)
@@ -61,7 +61,6 @@ namespace Student_Hostel_Management_System.View
                     cmbRoomID.Items.Add(r.RoomID);
             }
 
-            // Load all service requests
             dgvRequest.DataSource = controller.GetAllRequests();
         }
 
@@ -82,7 +81,12 @@ namespace Student_Hostel_Management_System.View
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            int requestID = Convert.ToInt32(txtRequestID.Text);
+            if (!int.TryParse(txtRequestID.Text, out int requestID))
+            {
+                MessageBox.Show("Enter a valid Request ID to update.");
+                return;
+            }
+
             int studentID = Convert.ToInt32(cmbStudentID.SelectedItem);
             int roomID = Convert.ToInt32(cmbRoomID.SelectedItem);
             string type = cmbType.Text;
@@ -98,7 +102,12 @@ namespace Student_Hostel_Management_System.View
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            int requestID = Convert.ToInt32(txtRequestID.Text);
+            if (!int.TryParse(txtRequestID.Text, out int requestID))
+            {
+                MessageBox.Show("Enter a valid Request ID to delete.");
+                return;
+            }
+
             controller.DeleteRequest(requestID);
 
             MessageBox.Show("Request Deleted");
@@ -107,12 +116,22 @@ namespace Student_Hostel_Management_System.View
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            int requestID = Convert.ToInt32(txtRequestID.Text);
+            if (string.IsNullOrWhiteSpace(txtRequestID.Text))
+            {
+                MessageBox.Show("Please enter a Request ID.");
+                return;
+            }
+
+            if (!int.TryParse(txtRequestID.Text, out int requestID))
+            {
+                MessageBox.Show("Request ID must be a number.");
+                return;
+            }
+
             ServiceRequest r = controller.SearchRequest(requestID);
 
             if (r != null)
             {
-                txtRequestID.Text = r.RequestID.ToString();
                 cmbStudentID.SelectedItem = r.StudentID;
                 cmbRoomID.SelectedItem = r.RoomID;
                 cmbType.SelectedItem = r.Type;
@@ -131,8 +150,10 @@ namespace Student_Hostel_Management_System.View
         {
             txtRequestID.Clear();
             txtDescription.Clear();
+
             if (cmbStudentID.Items.Count > 0) cmbStudentID.SelectedIndex = 0;
             if (cmbRoomID.Items.Count > 0) cmbRoomID.SelectedIndex = 0;
+
             cmbType.SelectedIndex = 0;
             cmbStatus.SelectedIndex = 0;
         }
@@ -153,18 +174,19 @@ namespace Student_Hostel_Management_System.View
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvRequest.Rows[e.RowIndex];
-                txtRequestID.Text = row.Cells[0].Value.ToString();
+
+                txtRequestID.Text = row.Cells[0].Value?.ToString() ?? "";
                 cmbStudentID.SelectedItem = Convert.ToInt32(row.Cells[1].Value);
                 cmbRoomID.SelectedItem = Convert.ToInt32(row.Cells[2].Value);
-                cmbType.SelectedItem = row.Cells[3].Value.ToString();
-                txtDescription.Text = row.Cells[4].Value.ToString();
-                cmbStatus.SelectedItem = row.Cells[5].Value.ToString();
+                cmbType.SelectedItem = row.Cells[3].Value?.ToString() ?? "";
+                txtDescription.Text = row.Cells[4].Value?.ToString() ?? "";
+                cmbStatus.SelectedItem = row.Cells[5].Value?.ToString() ?? "";
             }
         }
 
         private void txtRequestID_TextChanged(object sender, EventArgs e)
         {
-            txtRequestID.ReadOnly = true;
+            // Optional: keep empty
         }
     }
 }

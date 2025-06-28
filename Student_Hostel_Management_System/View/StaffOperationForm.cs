@@ -2,12 +2,7 @@
 using Student_Hostel_Management_System.Model;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Student_Hostel_Management_System.View
@@ -16,6 +11,7 @@ namespace Student_Hostel_Management_System.View
     {
         private StaffController controller;
         private User loggedInUser;
+
         public StaffOperationForm(User user)
         {
             InitializeComponent();
@@ -25,9 +21,14 @@ namespace Student_Hostel_Management_System.View
 
         private void StaffOperationForm_Load(object sender, EventArgs e)
         {
+            // Hide UserID label and ComboBox (you must name them exactly)
+            lblUserID.Visible = false;
+            cmbUserID.Visible = false;
+
+            // Load UserID values internally (hidden from user)
             UserController userController = new UserController();
             List<User> userList = userController.GetAlluser()
-                .Where(u => u.Role == RoleType.Staff || u.Role==RoleType.Admin).ToList();
+                .Where(u => u.Role == RoleType.Staff || u.Role == RoleType.Admin).ToList();
 
             cmbUserID.DataSource = userList;
             cmbUserID.DisplayMember = "Username";
@@ -40,6 +41,12 @@ namespace Student_Hostel_Management_System.View
         {
             dgvStaff.DataSource = null;
             dgvStaff.DataSource = controller.GetAllStaff();
+
+            // Hide the UserID column
+            if (dgvStaff.Columns["UserID"] != null)
+            {
+                dgvStaff.Columns["UserID"].Visible = false;
+            }
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -112,13 +119,15 @@ namespace Student_Hostel_Management_System.View
             txtName.Clear();
             txtPhone.Clear();
             txtSearch.Clear();
-            cmbUserID.SelectedIndex = 0;
             txtStaffID.Enabled = true;
+            if (cmbUserID.Items.Count > 0)
+            {
+                cmbUserID.SelectedIndex = 0;
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-          
             if (string.IsNullOrWhiteSpace(txtSearch.Text))
             {
                 MessageBox.Show("Please enter a Staff ID.");
@@ -155,6 +164,19 @@ namespace Student_Hostel_Management_System.View
             AdminHomeFrame admin = new AdminHomeFrame(loggedInUser);
             admin.Show();
         }
+
+        private void dgvStaff_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dgvStaff.Rows[e.RowIndex];
+
+                txtStaffID.Text = row.Cells[0].Value.ToString();
+                cmbUserID.SelectedValue = Convert.ToInt32(row.Cells[1].Value);
+                txtName.Text = row.Cells[2].Value.ToString();
+                txtPhone.Text = row.Cells[3].Value.ToString();
+                txtStaffID.Enabled = false;
+            }
+        }
     }
 }
-

@@ -41,89 +41,104 @@
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("ROG Fonts", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(134, 42);
+            this.lblWelcome.Font = new System.Drawing.Font("MS Reference Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(203, 26);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(322, 34);
+            this.lblWelcome.Size = new System.Drawing.Size(269, 35);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Welcome, Admin";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnManageUsers
             // 
+            this.btnManageUsers.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnManageUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnManageUsers.Location = new System.Drawing.Point(100, 100);
             this.btnManageUsers.Name = "btnManageUsers";
-            this.btnManageUsers.Size = new System.Drawing.Size(150, 40);
+            this.btnManageUsers.Size = new System.Drawing.Size(159, 54);
             this.btnManageUsers.TabIndex = 1;
             this.btnManageUsers.Text = "Manage Users";
-            this.btnManageUsers.UseVisualStyleBackColor = true;
+            this.btnManageUsers.UseVisualStyleBackColor = false;
             this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
             // 
             // btnManageRooms
             // 
-            this.btnManageRooms.Location = new System.Drawing.Point(100, 160);
+            this.btnManageRooms.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnManageRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageRooms.Location = new System.Drawing.Point(100, 174);
             this.btnManageRooms.Name = "btnManageRooms";
-            this.btnManageRooms.Size = new System.Drawing.Size(150, 40);
+            this.btnManageRooms.Size = new System.Drawing.Size(159, 45);
             this.btnManageRooms.TabIndex = 2;
             this.btnManageRooms.Text = "Manage Rooms";
-            this.btnManageRooms.UseVisualStyleBackColor = true;
+            this.btnManageRooms.UseVisualStyleBackColor = false;
             this.btnManageRooms.Click += new System.EventHandler(this.btnManageRooms_Click);
             // 
             // btnViewBills
             // 
-            this.btnViewBills.Location = new System.Drawing.Point(330, 100);
+            this.btnViewBills.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnViewBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewBills.Location = new System.Drawing.Point(428, 100);
             this.btnViewBills.Name = "btnViewBills";
-            this.btnViewBills.Size = new System.Drawing.Size(150, 40);
+            this.btnViewBills.Size = new System.Drawing.Size(156, 54);
             this.btnViewBills.TabIndex = 3;
             this.btnViewBills.Text = "View Bills";
-            this.btnViewBills.UseVisualStyleBackColor = true;
+            this.btnViewBills.UseVisualStyleBackColor = false;
             this.btnViewBills.Click += new System.EventHandler(this.btnViewBills_Click);
             // 
             // btnServiceRequests
             // 
-            this.btnServiceRequests.Location = new System.Drawing.Point(330, 160);
+            this.btnServiceRequests.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnServiceRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServiceRequests.Location = new System.Drawing.Point(428, 174);
             this.btnServiceRequests.Name = "btnServiceRequests";
-            this.btnServiceRequests.Size = new System.Drawing.Size(150, 40);
+            this.btnServiceRequests.Size = new System.Drawing.Size(156, 45);
             this.btnServiceRequests.TabIndex = 4;
             this.btnServiceRequests.Text = "Service Requests";
-            this.btnServiceRequests.UseVisualStyleBackColor = true;
+            this.btnServiceRequests.UseVisualStyleBackColor = false;
             this.btnServiceRequests.Click += new System.EventHandler(this.btnServiceRequests_Click);
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(215, 266);
+            this.btnLogOut.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Location = new System.Drawing.Point(251, 320);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(150, 40);
+            this.btnLogOut.Size = new System.Drawing.Size(177, 47);
             this.btnLogOut.TabIndex = 5;
             this.btnLogOut.Text = "Log Out";
-            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnManageStudents
             // 
-            this.btnManageStudents.Location = new System.Drawing.Point(100, 220);
+            this.btnManageStudents.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnManageStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageStudents.Location = new System.Drawing.Point(100, 236);
             this.btnManageStudents.Name = "btnManageStudents";
-            this.btnManageStudents.Size = new System.Drawing.Size(150, 40);
+            this.btnManageStudents.Size = new System.Drawing.Size(159, 49);
             this.btnManageStudents.TabIndex = 6;
             this.btnManageStudents.Text = "Manage Students";
-            this.btnManageStudents.UseVisualStyleBackColor = true;
+            this.btnManageStudents.UseVisualStyleBackColor = false;
             this.btnManageStudents.Click += new System.EventHandler(this.btnManageStudents_Click);
             // 
             // btnManageStaff
             // 
-            this.btnManageStaff.Location = new System.Drawing.Point(330, 220);
+            this.btnManageStaff.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnManageStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageStaff.Location = new System.Drawing.Point(428, 236);
             this.btnManageStaff.Name = "btnManageStaff";
-            this.btnManageStaff.Size = new System.Drawing.Size(150, 40);
+            this.btnManageStaff.Size = new System.Drawing.Size(156, 49);
             this.btnManageStaff.TabIndex = 7;
             this.btnManageStaff.Text = "Manage Staff";
-            this.btnManageStaff.UseVisualStyleBackColor = true;
+            this.btnManageStaff.UseVisualStyleBackColor = false;
             this.btnManageStaff.Click += new System.EventHandler(this.btnManageStaff_Click);
             // 
             // AdminHomeFrame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 353);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(695, 434);
             this.Controls.Add(this.btnManageStaff);
             this.Controls.Add(this.btnManageStudents);
             this.Controls.Add(this.btnLogOut);

@@ -52,15 +52,17 @@
             // lblRoomNumber
             // 
             this.lblRoomNumber.AutoSize = true;
+            this.lblRoomNumber.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblRoomNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomNumber.Location = new System.Drawing.Point(40, 30);
             this.lblRoomNumber.Name = "lblRoomNumber";
-            this.lblRoomNumber.Size = new System.Drawing.Size(104, 16);
+            this.lblRoomNumber.Size = new System.Drawing.Size(118, 16);
             this.lblRoomNumber.TabIndex = 0;
             this.lblRoomNumber.Text = "Room Number : ";
             // 
             // txtRoomNumber
             // 
-            this.txtRoomNumber.Location = new System.Drawing.Point(140, 30);
+            this.txtRoomNumber.Location = new System.Drawing.Point(197, 27);
             this.txtRoomNumber.Name = "txtRoomNumber";
             this.txtRoomNumber.Size = new System.Drawing.Size(200, 22);
             this.txtRoomNumber.TabIndex = 1;
@@ -68,15 +70,17 @@
             // lblCapacity
             // 
             this.lblCapacity.AutoSize = true;
+            this.lblCapacity.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCapacity.Location = new System.Drawing.Point(40, 70);
             this.lblCapacity.Name = "lblCapacity";
-            this.lblCapacity.Size = new System.Drawing.Size(66, 16);
+            this.lblCapacity.Size = new System.Drawing.Size(76, 16);
             this.lblCapacity.TabIndex = 2;
             this.lblCapacity.Text = "Capacity :";
             // 
             // txtCapacity
             // 
-            this.txtCapacity.Location = new System.Drawing.Point(140, 70);
+            this.txtCapacity.Location = new System.Drawing.Point(197, 67);
             this.txtCapacity.Name = "txtCapacity";
             this.txtCapacity.Size = new System.Drawing.Size(200, 22);
             this.txtCapacity.TabIndex = 3;
@@ -84,16 +88,18 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStatus.Location = new System.Drawing.Point(40, 110);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(50, 16);
+            this.lblStatus.Size = new System.Drawing.Size(58, 16);
             this.lblStatus.TabIndex = 4;
             this.lblStatus.Text = "Status :";
             // 
             // cmbStatus
             // 
             this.cmbStatus.FormattingEnabled = true;
-            this.cmbStatus.Location = new System.Drawing.Point(140, 110);
+            this.cmbStatus.Location = new System.Drawing.Point(197, 107);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(200, 24);
             this.cmbStatus.TabIndex = 5;
@@ -101,78 +107,92 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(400, 30);
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(647, 30);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 30);
+            this.btnAdd.Size = new System.Drawing.Size(112, 42);
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(400, 70);
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(550, 96);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(100, 30);
+            this.btnUpdate.Size = new System.Drawing.Size(100, 35);
             this.btnUpdate.TabIndex = 7;
-            this.btnUpdate.Text = "update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(400, 110);
+            this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(757, 96);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 30);
+            this.btnDelete.Size = new System.Drawing.Size(100, 35);
             this.btnDelete.TabIndex = 8;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(400, 150);
+            this.btnClear.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(550, 176);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(100, 30);
+            this.btnClear.Size = new System.Drawing.Size(100, 33);
             this.btnClear.TabIndex = 9;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(400, 190);
+            this.btnBack.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(647, 239);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(100, 30);
+            this.btnBack.Size = new System.Drawing.Size(112, 40);
             this.btnBack.TabIndex = 10;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // dgvRooms
             // 
+            this.dgvRooms.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dgvRooms.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvRooms.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRooms.Location = new System.Drawing.Point(43, 269);
+            this.dgvRooms.Location = new System.Drawing.Point(43, 314);
             this.dgvRooms.Name = "dgvRooms";
             this.dgvRooms.RowHeadersWidth = 51;
             this.dgvRooms.RowTemplate.Height = 24;
-            this.dgvRooms.Size = new System.Drawing.Size(700, 200);
+            this.dgvRooms.Size = new System.Drawing.Size(871, 200);
             this.dgvRooms.TabIndex = 11;
             this.dgvRooms.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRooms_CellClick);
             // 
             // lblRoomID
             // 
             this.lblRoomID.AutoSize = true;
+            this.lblRoomID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblRoomID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomID.Location = new System.Drawing.Point(40, 150);
             this.lblRoomID.Name = "lblRoomID";
-            this.lblRoomID.Size = new System.Drawing.Size(66, 16);
+            this.lblRoomID.Size = new System.Drawing.Size(75, 16);
             this.lblRoomID.TabIndex = 12;
             this.lblRoomID.Text = "Room ID :";
             // 
             // txtRoomID
             // 
             this.txtRoomID.Enabled = false;
-            this.txtRoomID.Location = new System.Drawing.Point(140, 150);
+            this.txtRoomID.Location = new System.Drawing.Point(197, 147);
             this.txtRoomID.Name = "txtRoomID";
             this.txtRoomID.Size = new System.Drawing.Size(200, 22);
             this.txtRoomID.TabIndex = 13;
@@ -180,44 +200,51 @@
             // lblRoomSearch
             // 
             this.lblRoomSearch.AutoSize = true;
+            this.lblRoomSearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblRoomSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomSearch.Location = new System.Drawing.Point(40, 190);
             this.lblRoomSearch.Name = "lblRoomSearch";
-            this.lblRoomSearch.Size = new System.Drawing.Size(94, 16);
+            this.lblRoomSearch.Size = new System.Drawing.Size(109, 16);
             this.lblRoomSearch.TabIndex = 14;
             this.lblRoomSearch.Text = "Search By ID : ";
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(140, 190);
+            this.txtSearch.Location = new System.Drawing.Point(197, 187);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(200, 22);
             this.txtSearch.TabIndex = 15;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(197, 218);
+            this.btnSearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(163, 239);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(75, 23);
+            this.btnSearch.Size = new System.Drawing.Size(119, 40);
             this.btnSearch.TabIndex = 16;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnAssign
             // 
-            this.btnAssign.Location = new System.Drawing.Point(556, 30);
+            this.btnAssign.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAssign.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssign.Location = new System.Drawing.Point(757, 176);
             this.btnAssign.Name = "btnAssign";
-            this.btnAssign.Size = new System.Drawing.Size(100, 30);
+            this.btnAssign.Size = new System.Drawing.Size(100, 33);
             this.btnAssign.TabIndex = 17;
             this.btnAssign.Text = "Assign";
-            this.btnAssign.UseVisualStyleBackColor = true;
+            this.btnAssign.UseVisualStyleBackColor = false;
             this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
             // 
             // RoomOperationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(788, 481);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(969, 526);
             this.Controls.Add(this.btnAssign);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);

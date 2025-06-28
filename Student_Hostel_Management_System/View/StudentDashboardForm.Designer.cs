@@ -37,16 +37,17 @@
             this.btnMyRequests = new System.Windows.Forms.Button();
             this.btnMyBills = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
             this.grpRoomInfo.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Location = new System.Drawing.Point(20, 20);
+            this.lblWelcome.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(46, 18);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(68, 16);
+            this.lblWelcome.Size = new System.Drawing.Size(76, 16);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Welcome,";
             // 
@@ -55,7 +56,7 @@
             this.lblRoomNum.AutoSize = true;
             this.lblRoomNum.Location = new System.Drawing.Point(6, 30);
             this.lblRoomNum.Name = "lblRoomNum";
-            this.lblRoomNum.Size = new System.Drawing.Size(101, 16);
+            this.lblRoomNum.Size = new System.Drawing.Size(114, 16);
             this.lblRoomNum.TabIndex = 1;
             this.lblRoomNum.Text = "Room Number: ";
             // 
@@ -64,7 +65,7 @@
             this.lblStatus.AutoSize = true;
             this.lblStatus.Location = new System.Drawing.Point(6, 93);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(47, 16);
+            this.lblStatus.Size = new System.Drawing.Size(54, 16);
             this.lblStatus.TabIndex = 2;
             this.lblStatus.Text = "Status:";
             // 
@@ -73,27 +74,30 @@
             this.lblCapacity.AutoSize = true;
             this.lblCapacity.Location = new System.Drawing.Point(6, 61);
             this.lblCapacity.Name = "lblCapacity";
-            this.lblCapacity.Size = new System.Drawing.Size(66, 16);
+            this.lblCapacity.Size = new System.Drawing.Size(76, 16);
             this.lblCapacity.TabIndex = 3;
             this.lblCapacity.Text = "Capacity: ";
             // 
             // grpRoomInfo
             // 
+            this.grpRoomInfo.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.grpRoomInfo.Controls.Add(this.lblRoomNum);
             this.grpRoomInfo.Controls.Add(this.lblStatus);
             this.grpRoomInfo.Controls.Add(this.lblCapacity);
-            this.grpRoomInfo.Location = new System.Drawing.Point(40, 60);
+            this.grpRoomInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grpRoomInfo.Location = new System.Drawing.Point(49, 60);
             this.grpRoomInfo.Name = "grpRoomInfo";
-            this.grpRoomInfo.Size = new System.Drawing.Size(400, 150);
+            this.grpRoomInfo.Size = new System.Drawing.Size(522, 172);
             this.grpRoomInfo.TabIndex = 4;
             this.grpRoomInfo.TabStop = false;
             this.grpRoomInfo.Text = "Assigned Room info";
             // 
             // btnRequest
             // 
-            this.btnRequest.Location = new System.Drawing.Point(150, 230);
+            this.btnRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRequest.Location = new System.Drawing.Point(49, 254);
             this.btnRequest.Name = "btnRequest";
-            this.btnRequest.Size = new System.Drawing.Size(180, 35);
+            this.btnRequest.Size = new System.Drawing.Size(196, 45);
             this.btnRequest.TabIndex = 5;
             this.btnRequest.Text = "Submit Service Request";
             this.btnRequest.UseVisualStyleBackColor = true;
@@ -101,9 +105,10 @@
             // 
             // btnMyRequests
             // 
-            this.btnMyRequests.Location = new System.Drawing.Point(150, 270);
+            this.btnMyRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyRequests.Location = new System.Drawing.Point(391, 254);
             this.btnMyRequests.Name = "btnMyRequests";
-            this.btnMyRequests.Size = new System.Drawing.Size(180, 35);
+            this.btnMyRequests.Size = new System.Drawing.Size(180, 45);
             this.btnMyRequests.TabIndex = 6;
             this.btnMyRequests.Text = "View My Request";
             this.btnMyRequests.UseVisualStyleBackColor = true;
@@ -111,9 +116,10 @@
             // 
             // btnMyBills
             // 
-            this.btnMyBills.Location = new System.Drawing.Point(150, 310);
+            this.btnMyBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyBills.Location = new System.Drawing.Point(49, 318);
             this.btnMyBills.Name = "btnMyBills";
-            this.btnMyBills.Size = new System.Drawing.Size(180, 40);
+            this.btnMyBills.Size = new System.Drawing.Size(196, 40);
             this.btnMyBills.TabIndex = 7;
             this.btnMyBills.Text = "View Utility Bills";
             this.btnMyBills.UseVisualStyleBackColor = true;
@@ -121,7 +127,8 @@
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(150, 350);
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(391, 318);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(180, 40);
             this.btnLogout.TabIndex = 8;
@@ -129,22 +136,12 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnBack
-            // 
-            this.btnBack.Location = new System.Drawing.Point(150, 390);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(180, 40);
-            this.btnBack.TabIndex = 9;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
-            // 
             // StudentDashboardForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 485);
-            this.Controls.Add(this.btnBack);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(650, 485);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnMyBills);
             this.Controls.Add(this.btnMyRequests);
@@ -173,6 +170,5 @@
         private System.Windows.Forms.Button btnMyRequests;
         private System.Windows.Forms.Button btnMyBills;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.Button btnBack;
     }
 }

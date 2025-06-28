@@ -39,71 +39,83 @@
             // 
             // btnManageStudents
             // 
-            this.btnManageStudents.Location = new System.Drawing.Point(101, 222);
+            this.btnManageStudents.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnManageStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageStudents.Location = new System.Drawing.Point(89, 278);
             this.btnManageStudents.Name = "btnManageStudents";
-            this.btnManageStudents.Size = new System.Drawing.Size(150, 40);
+            this.btnManageStudents.Size = new System.Drawing.Size(173, 64);
             this.btnManageStudents.TabIndex = 14;
             this.btnManageStudents.Text = "Manage Students";
-            this.btnManageStudents.UseVisualStyleBackColor = true;
+            this.btnManageStudents.UseVisualStyleBackColor = false;
             this.btnManageStudents.Click += new System.EventHandler(this.btnManageStudents_Click);
             // 
             // btnLogOut
             // 
-            this.btnLogOut.Location = new System.Drawing.Point(331, 222);
+            this.btnLogOut.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogOut.Location = new System.Drawing.Point(412, 278);
             this.btnLogOut.Name = "btnLogOut";
-            this.btnLogOut.Size = new System.Drawing.Size(150, 40);
+            this.btnLogOut.Size = new System.Drawing.Size(161, 64);
             this.btnLogOut.TabIndex = 13;
             this.btnLogOut.Text = "Log Out";
-            this.btnLogOut.UseVisualStyleBackColor = true;
+            this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // btnServiceRequests
             // 
-            this.btnServiceRequests.Location = new System.Drawing.Point(331, 162);
+            this.btnServiceRequests.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnServiceRequests.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnServiceRequests.Location = new System.Drawing.Point(412, 193);
             this.btnServiceRequests.Name = "btnServiceRequests";
-            this.btnServiceRequests.Size = new System.Drawing.Size(150, 40);
+            this.btnServiceRequests.Size = new System.Drawing.Size(161, 60);
             this.btnServiceRequests.TabIndex = 12;
             this.btnServiceRequests.Text = "Service Requests";
-            this.btnServiceRequests.UseVisualStyleBackColor = true;
+            this.btnServiceRequests.UseVisualStyleBackColor = false;
             this.btnServiceRequests.Click += new System.EventHandler(this.btnServiceRequests_Click);
             // 
             // btnViewBills
             // 
-            this.btnViewBills.Location = new System.Drawing.Point(331, 102);
+            this.btnViewBills.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnViewBills.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewBills.Location = new System.Drawing.Point(412, 102);
             this.btnViewBills.Name = "btnViewBills";
-            this.btnViewBills.Size = new System.Drawing.Size(150, 40);
+            this.btnViewBills.Size = new System.Drawing.Size(161, 61);
             this.btnViewBills.TabIndex = 11;
             this.btnViewBills.Text = "View Bills";
-            this.btnViewBills.UseVisualStyleBackColor = true;
+            this.btnViewBills.UseVisualStyleBackColor = false;
             this.btnViewBills.Click += new System.EventHandler(this.btnViewBills_Click);
             // 
             // btnManageRooms
             // 
-            this.btnManageRooms.Location = new System.Drawing.Point(101, 162);
+            this.btnManageRooms.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnManageRooms.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageRooms.Location = new System.Drawing.Point(89, 193);
             this.btnManageRooms.Name = "btnManageRooms";
-            this.btnManageRooms.Size = new System.Drawing.Size(150, 40);
+            this.btnManageRooms.Size = new System.Drawing.Size(173, 60);
             this.btnManageRooms.TabIndex = 10;
             this.btnManageRooms.Text = "Manage Rooms";
-            this.btnManageRooms.UseVisualStyleBackColor = true;
+            this.btnManageRooms.UseVisualStyleBackColor = false;
             this.btnManageRooms.Click += new System.EventHandler(this.btnManageRooms_Click);
             // 
             // btnManageUsers
             // 
-            this.btnManageUsers.Location = new System.Drawing.Point(101, 102);
+            this.btnManageUsers.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnManageUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnManageUsers.Location = new System.Drawing.Point(89, 102);
             this.btnManageUsers.Name = "btnManageUsers";
-            this.btnManageUsers.Size = new System.Drawing.Size(150, 40);
+            this.btnManageUsers.Size = new System.Drawing.Size(173, 61);
             this.btnManageUsers.TabIndex = 9;
             this.btnManageUsers.Text = "Manage Users";
-            this.btnManageUsers.UseVisualStyleBackColor = true;
+            this.btnManageUsers.UseVisualStyleBackColor = false;
             this.btnManageUsers.Click += new System.EventHandler(this.btnManageUsers_Click);
             // 
             // lblWelcome
             // 
             this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("ROG Fonts", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(135, 44);
+            this.lblWelcome.Font = new System.Drawing.Font("MS Reference Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.Location = new System.Drawing.Point(202, 20);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(335, 34);
+            this.lblWelcome.Size = new System.Drawing.Size(246, 35);
             this.lblWelcome.TabIndex = 8;
             this.lblWelcome.Text = "Welcome, Staff";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -112,7 +124,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(582, 353);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(632, 401);
             this.Controls.Add(this.btnManageStudents);
             this.Controls.Add(this.btnLogOut);
             this.Controls.Add(this.btnServiceRequests);

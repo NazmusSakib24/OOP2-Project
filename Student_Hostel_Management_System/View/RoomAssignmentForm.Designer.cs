@@ -39,16 +39,18 @@
             // lblStudent
             // 
             this.lblStudent.AutoSize = true;
+            this.lblStudent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblStudent.Location = new System.Drawing.Point(130, 93);
             this.lblStudent.Name = "lblStudent";
-            this.lblStudent.Size = new System.Drawing.Size(93, 16);
+            this.lblStudent.Size = new System.Drawing.Size(107, 16);
             this.lblStudent.TabIndex = 0;
             this.lblStudent.Text = "Select Student";
             // 
             // cmbStudent
             // 
             this.cmbStudent.FormattingEnabled = true;
-            this.cmbStudent.Location = new System.Drawing.Point(229, 90);
+            this.cmbStudent.Location = new System.Drawing.Point(254, 90);
             this.cmbStudent.Name = "cmbStudent";
             this.cmbStudent.Size = new System.Drawing.Size(121, 24);
             this.cmbStudent.TabIndex = 1;
@@ -56,44 +58,51 @@
             // lblRoom
             // 
             this.lblRoom.AutoSize = true;
+            this.lblRoom.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoom.Location = new System.Drawing.Point(130, 174);
             this.lblRoom.Name = "lblRoom";
-            this.lblRoom.Size = new System.Drawing.Size(85, 16);
+            this.lblRoom.Size = new System.Drawing.Size(96, 16);
             this.lblRoom.TabIndex = 2;
             this.lblRoom.Text = "Select Room";
             // 
             // cmbRoom
             // 
             this.cmbRoom.FormattingEnabled = true;
-            this.cmbRoom.Location = new System.Drawing.Point(229, 171);
+            this.cmbRoom.Location = new System.Drawing.Point(254, 171);
             this.cmbRoom.Name = "cmbRoom";
             this.cmbRoom.Size = new System.Drawing.Size(121, 24);
             this.cmbRoom.TabIndex = 3;
             // 
             // btnAssign
             // 
-            this.btnAssign.Location = new System.Drawing.Point(207, 251);
+            this.btnAssign.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAssign.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssign.Location = new System.Drawing.Point(205, 234);
             this.btnAssign.Name = "btnAssign";
-            this.btnAssign.Size = new System.Drawing.Size(75, 23);
+            this.btnAssign.Size = new System.Drawing.Size(114, 40);
             this.btnAssign.TabIndex = 4;
             this.btnAssign.Text = "Assign ";
-            this.btnAssign.UseVisualStyleBackColor = true;
+            this.btnAssign.UseVisualStyleBackColor = false;
             this.btnAssign.Click += new System.EventHandler(this.btnAssign_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(276, 301);
+            this.btnBack.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(205, 305);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.Size = new System.Drawing.Size(114, 37);
             this.btnBack.TabIndex = 5;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.button1_Click);
             // 
             // RoomAssignmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(537, 404);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnAssign);

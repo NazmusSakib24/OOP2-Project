@@ -53,7 +53,8 @@
             // lblStudentID
             // 
             this.lblStudentID.AutoSize = true;
-            this.lblStudentID.Location = new System.Drawing.Point(50, 30);
+            this.lblStudentID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblStudentID.Location = new System.Drawing.Point(47, 33);
             this.lblStudentID.Name = "lblStudentID";
             this.lblStudentID.Size = new System.Drawing.Size(77, 16);
             this.lblStudentID.TabIndex = 0;
@@ -62,7 +63,7 @@
             // txtStudentID
             // 
             this.txtStudentID.Enabled = false;
-            this.txtStudentID.Location = new System.Drawing.Point(160, 30);
+            this.txtStudentID.Location = new System.Drawing.Point(169, 30);
             this.txtStudentID.Name = "txtStudentID";
             this.txtStudentID.Size = new System.Drawing.Size(200, 22);
             this.txtStudentID.TabIndex = 1;
@@ -70,6 +71,7 @@
             // lblUserID
             // 
             this.lblUserID.AutoSize = true;
+            this.lblUserID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblUserID.Location = new System.Drawing.Point(400, 30);
             this.lblUserID.Name = "lblUserID";
             this.lblUserID.Size = new System.Drawing.Size(61, 16);
@@ -87,7 +89,8 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(50, 80);
+            this.lblName.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblName.Location = new System.Drawing.Point(50, 83);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(53, 16);
             this.lblName.TabIndex = 4;
@@ -96,6 +99,7 @@
             // lblPhone
             // 
             this.lblPhone.AutoSize = true;
+            this.lblPhone.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblPhone.Location = new System.Drawing.Point(400, 80);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(52, 16);
@@ -104,7 +108,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(160, 80);
+            this.txtName.Location = new System.Drawing.Point(169, 80);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(200, 22);
             this.txtName.TabIndex = 6;
@@ -119,7 +123,8 @@
             // lblRoomID
             // 
             this.lblRoomID.AutoSize = true;
-            this.lblRoomID.Location = new System.Drawing.Point(50, 130);
+            this.lblRoomID.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblRoomID.Location = new System.Drawing.Point(47, 136);
             this.lblRoomID.Name = "lblRoomID";
             this.lblRoomID.Size = new System.Drawing.Size(113, 16);
             this.lblRoomID.TabIndex = 8;
@@ -128,46 +133,52 @@
             // cmbRoomID
             // 
             this.cmbRoomID.FormattingEnabled = true;
-            this.cmbRoomID.Location = new System.Drawing.Point(160, 130);
+            this.cmbRoomID.Location = new System.Drawing.Point(169, 130);
             this.cmbRoomID.Name = "cmbRoomID";
             this.cmbRoomID.Size = new System.Drawing.Size(121, 24);
             this.cmbRoomID.TabIndex = 9;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(100, 190);
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.Location = new System.Drawing.Point(93, 190);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(100, 35);
+            this.btnAdd.Size = new System.Drawing.Size(119, 46);
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Location = new System.Drawing.Point(210, 190);
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(238, 190);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(100, 35);
+            this.btnUpdate.Size = new System.Drawing.Size(112, 46);
             this.btnUpdate.TabIndex = 11;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(320, 190);
+            this.btnDelete.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(385, 190);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(100, 35);
+            this.btnDelete.Size = new System.Drawing.Size(111, 46);
             this.btnDelete.TabIndex = 12;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(732, 126);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(100, 30);
+            this.btnSearch.Size = new System.Drawing.Size(127, 37);
             this.btnSearch.TabIndex = 13;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
@@ -175,27 +186,32 @@
             // 
             // btnClear
             // 
-            this.btnClear.Location = new System.Drawing.Point(430, 190);
+            this.btnClear.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(531, 190);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(100, 35);
+            this.btnClear.Size = new System.Drawing.Size(105, 46);
             this.btnClear.TabIndex = 14;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(540, 190);
+            this.btnBack.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(670, 190);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(100, 35);
+            this.btnBack.Size = new System.Drawing.Size(116, 46);
             this.btnBack.TabIndex = 15;
             this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblSearch
             // 
             this.lblSearch.AutoSize = true;
+            this.lblSearch.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblSearch.Location = new System.Drawing.Point(365, 133);
             this.lblSearch.Name = "lblSearch";
             this.lblSearch.Size = new System.Drawing.Size(118, 16);
@@ -218,7 +234,7 @@
             this.dgvStudents.Name = "dgvStudents";
             this.dgvStudents.RowHeadersWidth = 51;
             this.dgvStudents.RowTemplate.Height = 24;
-            this.dgvStudents.Size = new System.Drawing.Size(780, 330);
+            this.dgvStudents.Size = new System.Drawing.Size(782, 330);
             this.dgvStudents.TabIndex = 18;
             this.dgvStudents.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudents_CellClick);
             // 
@@ -226,6 +242,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(882, 603);
             this.Controls.Add(this.dgvStudents);
             this.Controls.Add(this.txtSearch);

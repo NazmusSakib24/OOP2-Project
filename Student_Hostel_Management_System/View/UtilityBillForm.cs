@@ -154,5 +154,10 @@ namespace Student_Hostel_Management_System.View
             cmbStatus.SelectedIndex = 0;
 
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
