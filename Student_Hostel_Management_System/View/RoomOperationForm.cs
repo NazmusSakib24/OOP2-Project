@@ -26,6 +26,12 @@ namespace Student_Hostel_Management_System.View
             cmbStatus.SelectedIndex = 0;
 
             txtRoomID.Enabled = false;
+            LoadRooms();
+        }
+
+        private void LoadRooms()
+        {
+            dgvRooms.DataSource = null;
             dgvRooms.DataSource = controller.GetAllRooms();
         }
 
@@ -41,13 +47,9 @@ namespace Student_Hostel_Management_System.View
                 controller.AddRoom(room);
 
                 MessageBox.Show("Room Added Successfully");
-                dgvRooms.DataSource = controller.GetAllRooms();
-                dgvRooms.Refresh();
+                LoadRooms();
 
-                txtRoomID.Clear();
-                txtRoomNumber.Clear();
-                txtCapacity.Clear();
-                cmbStatus.SelectedIndex = 0;
+                ClearFields();
             }
             catch (Exception ex)
             {
@@ -74,13 +76,9 @@ namespace Student_Hostel_Management_System.View
                 controller.UpdateRoom(room);
 
                 MessageBox.Show("Room Updated Successfully");
-                dgvRooms.DataSource = controller.GetAllRooms();
-                dgvRooms.Refresh();
+                LoadRooms();
 
-                txtRoomID.Clear();
-                txtRoomNumber.Clear();
-                txtCapacity.Clear();
-                cmbStatus.SelectedIndex = 0;
+                ClearFields();
             }
             catch (Exception ex)
             {
@@ -102,13 +100,9 @@ namespace Student_Hostel_Management_System.View
                 controller.DeleteRoom(roomID);
 
                 MessageBox.Show("Room Deleted Successfully");
-                dgvRooms.DataSource = controller.GetAllRooms();
-                dgvRooms.Refresh();
+                LoadRooms();
 
-                txtRoomID.Clear();
-                txtRoomNumber.Clear();
-                txtCapacity.Clear();
-                cmbStatus.SelectedIndex = 0;
+                ClearFields();
             }
             catch (Exception ex)
             {
@@ -117,6 +111,11 @@ namespace Student_Hostel_Management_System.View
         }
 
         private void btnClear_Click(object sender, EventArgs e)
+        {
+            ClearFields();
+        }
+
+        private void ClearFields()
         {
             txtRoomID.Clear();
             txtRoomNumber.Clear();
@@ -138,9 +137,9 @@ namespace Student_Hostel_Management_System.View
             if (e.RowIndex != -1)
             {
                 DataGridViewRow row = dgvRooms.Rows[e.RowIndex];
-                txtRoomID.Text = row.Cells[0].Value.ToString();         
-                txtRoomNumber.Text = row.Cells[1].Value.ToString();     
-                txtCapacity.Text = row.Cells[2].Value.ToString();       
+                txtRoomID.Text = row.Cells[0].Value.ToString();
+                txtRoomNumber.Text = row.Cells[1].Value.ToString();
+                txtCapacity.Text = row.Cells[2].Value.ToString();
                 cmbStatus.SelectedItem = row.Cells[3].Value.ToString();
                 txtRoomID.Enabled = false;
             }
@@ -148,7 +147,13 @@ namespace Student_Hostel_Management_System.View
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            int roomID = Convert.ToInt32(txtSearch.Text);
+            int roomID;
+
+            if (!int.TryParse(txtSearch.Text, out roomID))
+            {
+                MessageBox.Show("Please enter a valid Room ID.");
+                return;
+            }
 
             Room room = controller.SearchRoom(roomID);
 
@@ -176,4 +181,3 @@ namespace Student_Hostel_Management_System.View
         }
     }
 }
-

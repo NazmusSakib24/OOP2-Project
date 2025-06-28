@@ -12,7 +12,6 @@ namespace Student_Hostel_Management_System.Model
     {
         SqlDbDataAccess sda = new SqlDbDataAccess();
 
-        // Add Admin
         public void AddAdmin(Admin admin)
         {
             SqlCommand cmd = sda.GetQuery("INSERT INTO Admins (UserID, Name) VALUES (@userID, @name)");
@@ -24,7 +23,6 @@ namespace Student_Hostel_Management_System.Model
             cmd.Connection.Close();
         }
 
-        // Delete Admin by AdminID
         public void DeleteAdmin(int adminID)
         {
             SqlCommand cmd = sda.GetQuery("DELETE FROM Admins WHERE AdminID = @adminID");
@@ -35,7 +33,6 @@ namespace Student_Hostel_Management_System.Model
             cmd.Connection.Close();
         }
 
-        // Delete Admin by UserID
         public void DeleteAdminByUserID(int userID)
         {
             SqlCommand cmd = sda.GetQuery("DELETE FROM Admins WHERE UserID = @userID");
@@ -46,7 +43,6 @@ namespace Student_Hostel_Management_System.Model
             cmd.Connection.Close();
         }
 
-        // Search Admin by name
         public Admin SearchAdmin(string name)
         {
             SqlCommand cmd = sda.GetQuery("SELECT * FROM Admins WHERE Name = @name");
@@ -71,7 +67,6 @@ namespace Student_Hostel_Management_System.Model
             return admin;
         }
 
-        // Get All Admins
         public List<Admin> GetAllAdmins()
         {
             SqlCommand cmd = sda.GetQuery("SELECT * FROM Admins");
@@ -96,7 +91,6 @@ namespace Student_Hostel_Management_System.Model
             return adminList;
         }
 
-        // Get Admin by UserID
         public Admin GetAdminByUserID(int userID)
         {
             SqlCommand cmd = sda.GetQuery("SELECT * FROM Admins WHERE UserID = @userID");

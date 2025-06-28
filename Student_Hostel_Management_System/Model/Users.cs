@@ -86,7 +86,6 @@ namespace Student_Hostel_Management_System.Model
         {
             SqlCommand cmdRole = null;
 
-            // Step 1: Delete from role-specific table
             if (role == "Admin")
             {
                 cmdRole = sda.GetQuery("DELETE FROM Admins WHERE UserID = @userID");
@@ -106,7 +105,6 @@ namespace Student_Hostel_Management_System.Model
             cmdRole.ExecuteNonQuery();
             cmdRole.Connection.Close();
 
-            // Step 2: Delete from Users
             SqlCommand cmdUser = sda.GetQuery("DELETE FROM Users WHERE UserID = @userID");
             cmdUser.CommandType = CommandType.Text;
             cmdUser.Parameters.AddWithValue("@userID", userId);

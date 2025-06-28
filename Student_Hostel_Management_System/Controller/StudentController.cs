@@ -50,5 +50,11 @@ namespace Student_Hostel_Management_System.Controller
         {
             return students.SearchStudentByUserID(userID);
         }
+
+        public int CountStudentsInRoom(int roomId)
+        {
+            return students.CountStudentsInRoom(roomId);
+        }
+
     }
 }

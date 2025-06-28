@@ -64,7 +64,6 @@ namespace Student_Hostel_Management_System.View
 
             int studentId = Convert.ToInt32(resultObj);
 
-            // Step 2: Get service requests for that StudentID
             ServiceRequestController controller = new ServiceRequestController();
             List<ServiceRequest> myRequests = controller.GetAllRequests()
                 .Where(r => r.StudentID == studentId)

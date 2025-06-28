@@ -152,6 +152,16 @@ namespace Student_Hostel_Management_System.Model
             cmd.Connection.Close();
         }
 
+        public int CountStudentsInRoom(int roomId)
+        {
+            SqlCommand cmd = sda.GetQuery("SELECT COUNT(*) FROM Students WHERE AssignedRoomID = @roomId;");
+            cmd.Parameters.AddWithValue("@roomId", roomId);
+            cmd.Connection.Open();
+            int count = (int)cmd.ExecuteScalar();
+            cmd.Connection.Close();
+            return count;
+        }
+
 
     }
 }

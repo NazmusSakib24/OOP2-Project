@@ -22,18 +22,19 @@ namespace Student_Hostel_Management_System.View
 
         private void StudentOperationForm_Load(object sender, EventArgs e)
         {
-            // Load Room IDs
             RoomController roomController = new RoomController();
             List<Room> roomList = roomController.GetAllRooms();
             cmbRoomID.Items.Clear();
             foreach (Room r in roomList)
             {
-                cmbRoomID.Items.Add(r.RoomID);
+                if (r.Status == "Available")
+                {
+                    cmbRoomID.Items.Add(r.RoomID);
+                }
             }
 
-            // Load student grid
             dgvStudents.DataSource = controller.GetAllStudents();
-            dgvStudents.Columns["UserID"].Visible = false; // ✅ hide UserID from grid
+            dgvStudents.Columns["UserID"].Visible = false;
             dgvStudents.Refresh();
         }
 
@@ -41,10 +42,22 @@ namespace Student_Hostel_Management_System.View
         {
             try
             {
-                int userID = loggedInUser.UserID; // ✅ Use logged-in user's ID
+                int userID = loggedInUser.UserID;
                 string name = txtName.Text;
                 string phone = txtPhone.Text;
                 int roomID = Convert.ToInt32(cmbRoomID.SelectedItem);
+
+                RoomController roomController = new RoomController();
+                Room selectedRoom = roomController.SearchRoom(roomID);
+
+                StudentController studentController = new StudentController();
+                int currentOccupants = studentController.CountStudentsInRoom(roomID);
+
+                if (currentOccupants >= selectedRoom.Capacity)
+                {
+                    MessageBox.Show("This room is already full. Please select another available room.");
+                    return;
+                }
 
                 Student s = new Student(0, userID, name, phone, roomID);
                 controller.AddStudent(s);
@@ -60,6 +73,7 @@ namespace Student_Hostel_Management_System.View
             }
         }
 
+
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             if (dgvStudents.SelectedRows.Count == 0)
@@ -71,7 +85,7 @@ namespace Student_Hostel_Management_System.View
             try
             {
                 int studentID = Convert.ToInt32(txtStudentID.Text);
-                int userID = loggedInUser.UserID; // ✅ Use logged-in user's ID
+                int userID = loggedInUser.UserID;
                 string name = txtName.Text;
                 string phone = txtPhone.Text;
                 int roomID = Convert.ToInt32(cmbRoomID.SelectedItem);

@@ -126,7 +126,6 @@ namespace Student_Hostel_Management_System.View
             {
                 int userId = Convert.ToInt32(txtUserID.Text);
 
-                // 🔥 Correct call with all required parameters
                 controller.DeleteUser(userId, selectedRole.ToString(), loggedInUser.Role.ToString());
 
                 MessageBox.Show("User Deleted Successfully");

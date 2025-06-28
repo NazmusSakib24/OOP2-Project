@@ -12,10 +12,8 @@ namespace Student_Hostel_Management_System.Model
         private int userID;
         private string name;
 
-        // Parameterless Constructor
         public Admin() { }
 
-        // Parameterized Constructor
         public Admin(int adminID, int userID, string name)
         {
             this.adminID = adminID;
@@ -23,7 +21,6 @@ namespace Student_Hostel_Management_System.Model
             this.name = name;
         }
 
-        // Properties
         public int AdminID
         {
             get { return adminID; }

@@ -21,11 +21,9 @@ namespace Student_Hostel_Management_System.View
 
         private void StaffOperationForm_Load(object sender, EventArgs e)
         {
-            // Hide UserID label and ComboBox (you must name them exactly)
             lblUserID.Visible = false;
             cmbUserID.Visible = false;
 
-            // Load UserID values internally (hidden from user)
             UserController userController = new UserController();
             List<User> userList = userController.GetAlluser()
                 .Where(u => u.Role == RoleType.Staff || u.Role == RoleType.Admin).ToList();
@@ -42,7 +40,6 @@ namespace Student_Hostel_Management_System.View
             dgvStaff.DataSource = null;
             dgvStaff.DataSource = controller.GetAllStaff();
 
-            // Hide the UserID column
             if (dgvStaff.Columns["UserID"] != null)
             {
                 dgvStaff.Columns["UserID"].Visible = false;
