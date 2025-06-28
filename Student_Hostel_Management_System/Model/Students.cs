@@ -41,7 +41,14 @@ namespace Student_Hostel_Management_System.Model
 
         public void DeleteStudent(int studentID)
         {
-            SqlCommand cmd = sda.GetQuery("DELETE FROM Students WHERE StudentID=@studentID;");
+            SqlCommand cmdService = sda.GetQuery("DELETE FROM ServiceRequests WHERE StudentID = @studentID");
+            cmdService.CommandType = CommandType.Text;
+            cmdService.Parameters.AddWithValue("@studentID", studentID);
+            cmdService.Connection.Open();
+            cmdService.ExecuteNonQuery();
+            cmdService.Connection.Close();
+
+            SqlCommand cmd = sda.GetQuery("DELETE FROM Students WHERE StudentID = @studentID;");
             cmd.CommandType = CommandType.Text;
             cmd.Parameters.AddWithValue("@studentID", studentID);
             cmd.Connection.Open();
@@ -58,6 +65,7 @@ namespace Student_Hostel_Management_System.Model
             cmd.ExecuteNonQuery();
             cmd.Connection.Close();
         }
+
 
 
         public Student SearchStudent(string name)

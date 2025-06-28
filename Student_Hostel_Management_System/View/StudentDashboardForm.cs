@@ -28,18 +28,26 @@ namespace Student_Hostel_Management_System.View
         private void StudentDashboardForm_Load(object sender, EventArgs e)
         {
             lblWelcome.Text = $"Welcome, {loggedInUser.Username}";
+
             Student student = studentController.GetStudentByUserID(loggedInUser.UserID);
-            if (student != null)
+            if (student == null)
             {
-                Room room = roomController.SearchRoomByID(student.AssignedRoomID);
-                if (room != null)
-                {
-                    lblRoomNum.Text = $"Room Number: {room.RoomNumber}";
-                    lblCapacity.Text = $"Capacity: {room.Capacity}";
-                    lblStatus.Text = $"Status: {room.Status}";
-                }
+                MessageBox.Show("Student record not found for this user.");
+                return;
             }
+
+            Room room = roomController.SearchRoomByID(student.AssignedRoomID);
+            if (room == null)
+            {
+                MessageBox.Show("Assigned room not found.");
+                return;
+            }
+
+            lblRoomNum.Text = $"Room Number: {room.RoomNumber}";
+            lblCapacity.Text = $"Capacity: {room.Capacity}";
+            lblStatus.Text = $"Status: {room.Status}";
         }
+
         private void btnRequest_Click(object sender, EventArgs e)
         {
             //this.Hide();

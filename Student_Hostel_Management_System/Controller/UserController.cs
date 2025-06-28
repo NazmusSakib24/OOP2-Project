@@ -37,9 +37,15 @@ namespace Student_Hostel_Management_System.Controller
             return users.SearchUser(username, password);
         }
 
+        public User SearchUserByID(int userId)
+        {
+            return users.GetAllUsers().FirstOrDefault(u => u.UserID == userId);
+        }
+
+
         public List<User> GetAlluser()
         {
-            return users.GetAllUser();
+            return users.GetAllUsers();
         }
 
         public User SearchUserByUsernameAndSecurityAns(string username, string securityAns)
